@@ -1,55 +1,79 @@
 package com.ipartek.formacion.hola.pojo;
 
-/**
- * 
- * @author curso
- * 
- */
-
-/**
- * 
- * Clase {@code Libro} representa un libro. Atributos: numeroPaginas, nombre y
- * autor.
- */
 public class Libro {
 
-	// Atributos
-	/**
-	 * int numeroPaginas numero de paginas que contiene el {@code Libro}.
-	 */
-	public int numeroPaginas;
-	/**
-	 * String nombre. nombre del {@code Libro}.
-	 */
-	public String nombre;
-	/**
-	 * String autor. nombre del autor del {@code Libro}.
-	 */
-	public String autor;
+	// Atributos y constantes
 
-	// Metodos o funciones
+	String titulo;
+	String autor;
+	int numeroPaginas;
 
-	/**
-	 * Muestra por pantalla los atributos del {@code Libro}.
+	/*
+	 * Constructores
+	 * 
+	 * Sirven para instanciar objetos de la clase <br> Tienen el mismo nombre
+	 * que la clase.No hace falta especificar el <code>return</code>
+	 * 
+	 * Sobrecarga: Es un metodo con el mismo nombre y el mismo return, <br> pero
+	 * diferentes parametros.
+	 * 
 	 */
 
-	public String describete() {
-		return "Descripcion: " + this.nombre + " Paginas: " + this.numeroPaginas + " Autor: " + this.autor;
+	// Constructor por defecto.
+	public Libro() {
+		super();
+		this.numeroPaginas = 0;
+		this.titulo = "Desconocido";
+		this.autor = "Anonimo";
+	}
+
+	// Constructor con parametros.
+	public Libro(String _titulo, String _autor, int _numeroPaginas) {
+		super();
+		this.titulo = _titulo;
+		this.autor = _autor;
+		this.setNumeroPaginas(_numeroPaginas);
 
 	}
 
-	/**
-	 * Aumentamos el numero de paginas.
-	 * 
-	 * @param numPaginas
-	 *            <code>int</code> numero de paginas nuevas escritas.
-	 * 
-	 */
-	public void escribir(int numPaginas) {
+	// Getters y setters
 
-		// this.numeroPaginas = this.numeroPaginas + numPaginas;
-		this.numeroPaginas += numPaginas;
-		;
+	public String getTitulo() {
+		return titulo;
+
 	}
 
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public int getNumeroPaginas() {
+		return numeroPaginas;
+	}
+
+	/**
+	 * En caso de ser negativo, seteamos a 0.
+	 * 
+	 * @param numeroPaginas
+	 */
+	public void setNumeroPaginas(int numeroPaginas) {
+		this.numeroPaginas = (numeroPaginas < 0) ? 0 : numeroPaginas;
+
+		// Otros metodos
+
+	}
+
+	@Override
+	public String toString() {
+		return "Libro [titulo=" + titulo + ", autor=" + autor + ", numeroPaginas=" + numeroPaginas + "]";
+	}
 }
