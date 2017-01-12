@@ -30,11 +30,11 @@ public class Dado {
 		System.out.println("El/a afortunad@ es: " + afortunado);
 		System.out.println(numeroAleatorio);
 
-		System.out.println("------listado-----------");
+		System.out.println("------listado------------");
 
 		listar();
 
-		System.out.println("------listado-----------");
+		System.out.println("------listado------------");
 
 		listarForEach();
 	}
