@@ -18,23 +18,23 @@ public class LibroTest {
 
 	}
 
-	@Test
+	// @Test
 
-	public void testConstructorConParametros() {
+	// public void testConstructorConParametros() {
 
-		Libro l = new Libro("Java 7", 324);
+	// Libro l = new Libro("Java 7", 324);
 
-		assertEquals("Java 7", l.getTitulo());
-		assertEquals("Anonimo", l.getAutor());
-		assertEquals(324, l.getNumeroPaginas());
+	// assertEquals("Java 7", l.getTitulo());
+	// assertEquals("Anonimo", l.getAutor());
+	// assertEquals(324, l.getNumeroPaginas());
 
-		// Paginas negativas.
-		l = new Libro("Java 7", -1);
+	// Paginas negativas.
+	// l = new Libro("Java 7", -1);
 
-		assertEquals("Java 7", l.getTitulo());
-		assertEquals("Anonimo", l.getAutor());
-		assertEquals(0, l.getNumeroPaginas());
-	}
+	// assertEquals("Java 7", l.getTitulo());
+	// assertEquals("Anonimo", l.getAutor());
+	// assertEquals(0, l.getNumeroPaginas());
+	// }
 
 	@Test
 	public void testTitulo() {
