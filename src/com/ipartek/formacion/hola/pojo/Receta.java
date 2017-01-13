@@ -11,6 +11,7 @@ public class Receta {
 	String dificultad;
 	int comensales;
 	String descripcion;
+	boolean tieneGluten;
 
 	// Constructores.
 
@@ -33,6 +34,7 @@ public class Receta {
 		this.dificultad = dificultad;
 		this.comensales = comensales;
 		this.descripcion = descripcion;
+		tieneGluten();
 	}
 
 	// Getters y Setters
@@ -84,15 +86,31 @@ public class Receta {
 		this.descripcion = descripcion;
 	}
 
-	// Metodos
+	public boolean isTieneGluten() {
+		return tieneGluten;
+	}
 
-	// public void isGlutenFree
+	public void setTieneGluten(boolean tieneGluten) {
+		this.tieneGluten = tieneGluten;
+	}
+
+	// Metodos
+	/**
+	 * Busca en los ingredientes si alguno tiene gluten.
+	 */
+	public void tieneGluten() {
+		for (Ingrediente forIngrediente : aIngrediente) {
+			if (forIngrediente.gluten) {
+				this.tieneGluten = true;
+			}
+		}
+	}
 
 	@Override
 	public String toString() {
-		return "Receta : titulo=" + titulo + ",\n Ingredientes =" + Arrays.toString(aIngrediente) + ",\n tiempo="
-				+ tiempo + ",\n dificultad=" + dificultad + ",\n comensales=" + comensales + ",\n descripcion="
-				+ descripcion + ".";
+		return "Receta : Titulo=" + titulo + ",\n Ingredientes =" + Arrays.toString(aIngrediente) + ",\n Tiempo="
+				+ tiempo + ",\n Dificultad=" + dificultad + ",\n Comensales=" + comensales + ",\n Descripcion="
+				+ descripcion + ".\n ¿Receta con gluten? = " + tieneGluten;
 	}
 
 }
