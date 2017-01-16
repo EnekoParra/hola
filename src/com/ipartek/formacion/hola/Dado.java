@@ -21,8 +21,6 @@ public class Dado {
 
 	public static void main(String[] args) {
 
-		// TODO buscar como generar numero aleatorio rango [0-14]
-
 		// int numeroAleatorio = (int) (Math.random() * aAlumnos.length);
 		int numeroAleatorio = Utilidades.getNumAleatorio(aAlumnos.length - 1);
 		String afortunado = aAlumnos[numeroAleatorio];

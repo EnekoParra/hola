@@ -1,12 +1,12 @@
 package com.ipartek.formacion.hola.pojo;
 
-public class Ingrediente {
+public class IngredienteA {
 
 	private String nombre;
 	private float cantidad;
 	private boolean gluten;
 
-	public Ingrediente(String nombre, float cantidad, boolean gluten) {
+	public IngredienteA(String nombre, float cantidad, boolean gluten) {
 		super();
 		this.nombre = nombre;
 		this.cantidad = cantidad;
