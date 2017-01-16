@@ -53,21 +53,15 @@ public class RecetaA {
 	 */
 	public boolean contiene(IngredienteA ingrediente) {
 		boolean resul = false;
-
-		if (ingredientes != null) {
+		if (ingrediente != null) {
 			final String NOMBRE_INGREDIENTE_BUSCAR = ingrediente.getNombre();
-			IngredienteA iterateIngredient = null;
-			for (int i = 0; i < this.ingredientes.size(); i++) {
-				iterateIngredient = this.ingredientes.get(i);
+			for (IngredienteA iterateIngredient : ingredientes) {
 				if (NOMBRE_INGREDIENTE_BUSCAR.equalsIgnoreCase(iterateIngredient.getNombre())) {
 					resul = true;
 					break;
-
-				} // if
-			} // for
-
-		} // if
-
+				}
+			}
+		}
 		return resul;
 	}// boolean
 
