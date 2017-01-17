@@ -39,7 +39,7 @@ public class Ingrediente {
 
 	@Override
 	public String toString() {
-		return "Ingrediente [nombre=" + nombre + ", cantidad=" + cantidad + ", gluten=" + gluten + "]";
+		return "Ingrediente: \n Nombre=" + nombre + ", cantidad=" + cantidad + ", gluten=" + gluten + "]\n";
 	}
 
 }
