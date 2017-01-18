@@ -26,6 +26,12 @@ public class VehiculoDiesel extends Vehiculo {
 	}
 
 	@Override
+	public void arrancar() {
+		// super.arrancar();
+		System.out.println("Arrancando Super Velocidad..");
+	}
+
+	@Override
 	public String toString() {
 		return "VehiculoDiesel [Combustible=" + combustible + "] extends " + super.toString();
 	}
