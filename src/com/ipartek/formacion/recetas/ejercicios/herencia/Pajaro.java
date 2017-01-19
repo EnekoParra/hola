@@ -3,6 +3,7 @@ package com.ipartek.formacion.recetas.ejercicios.herencia;
 public class Pajaro extends Animal implements Volador, Vendible {
 
 	private boolean puedeVolar;
+	private int numHuevosSemana;
 
 	public Pajaro() {
 		super();
@@ -11,6 +12,8 @@ public class Pajaro extends Animal implements Volador, Vendible {
 
 	public Pajaro(String raza, int precio) {
 		super(raza, precio);
+		this.puedeVolar = false;
+		this.numHuevosSemana = 0;
 	}
 
 	public boolean isPuedeVolar() {
@@ -19,6 +22,14 @@ public class Pajaro extends Animal implements Volador, Vendible {
 
 	public void setPuedeVolar(boolean puedeVolar) {
 		this.puedeVolar = puedeVolar;
+	}
+
+	public int getNumHuevosSemana() {
+		return numHuevosSemana;
+	}
+
+	public void setNumHuevosSemana(int numHuevosSemana) {
+		this.numHuevosSemana = numHuevosSemana;
 	}
 
 	@Override

@@ -24,19 +24,35 @@ public class MainRecetaA {
 		ingredientes.add(new IngredienteA("Perejil", 1, true));
 
 		// Crear Receta
-		RecetaA marmitako = new RecetaA("Marmitako by Karlos Arguiñano", ingredientes);
+
+		RecetaA marmitako = new RecetaA("Marmitako", ingredientes);
 		marmitako.setComensales(16);
-		marmitako.setDificultad("Moderada");
+		marmitako.setDificultad("Dificil");
 		marmitako.setTiempo(90);
+
+		RecetaA solomillo = new RecetaA("Solomillo", ingredientes);
+		solomillo.setComensales(16);
+		solomillo.setDificultad("Moderada");
+		solomillo.setTiempo(20);
+
+		RecetaA tortilla = new RecetaA("Tortilla", ingredientes);
+		tortilla.setComensales(16);
+		tortilla.setDificultad("Facil");
+		tortilla.setTiempo(30);
+		ArrayList<RecetaA> recetas = new ArrayList<RecetaA>();
+
+		recetas.add(marmitako);
+		recetas.add(solomillo);
+		recetas.add(tortilla);
 
 		// Mostrar por pantalla
 
-		System.out.println("Marmitako rico rico, la receta es:");
 		// if (!marmitako.isGlutenFree()) {
 		// System.out.println("***CONTIENE GLUTEN, atención alergicos.");
 		// }
 		System.out.println(marmitako.toString());
-
+		System.out.println(solomillo.toString());
+		System.out.println(tortilla.toString());
 	}
 
 }

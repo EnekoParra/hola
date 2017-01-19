@@ -2,20 +2,37 @@ package com.ipartek.formacion.hola.pojo;
 
 import java.util.ArrayList;
 
-public class RecetaA {
+public class RecetaA implements Comparable<RecetaA> {
+
+	public static final String FACIL = "facil";
+	public static final String MODERADO = "moderado";
+	public static final String DIFICIL = "dificil";
+
+	public String IMG_DEFAULT = "http://apps.enyojs.com/assets/apps/17daydietmealplan_icon.png";
 
 	private String titulo;
-	// private IngredienteA[] ingredientes;
+	private String imagen;
 	private ArrayList<IngredienteA> ingredientes;
 	private int tiempo;
 	private String dificultad;
 	private int comensales;
 	private String descripcion;
 
+	public RecetaA(String titulo) {
+		super();
+		this.titulo = titulo;
+		this.imagen = IMG_DEFAULT;
+		setIngredientes(null);
+		this.tiempo = 0;
+		this.comensales = 0;
+		this.dificultad = "facil";
+		this.descripcion = "Lorem ipsum....";
+	}
+
 	public RecetaA(String titulo, ArrayList<IngredienteA> ingredientes) {
 		super();
 		this.titulo = titulo;
-		// this.ingredientes = ingredientes;
+		this.imagen = IMG_DEFAULT;
 		setIngredientes(ingredientes);
 		this.tiempo = 0;
 		this.comensales = 0;
@@ -44,40 +61,37 @@ public class RecetaA {
 	}
 
 	/**
-	 * Comprueba si contiene el {@code IngredienteA} pasado como parametro.
+	 * Comprueba si contiene el {@code Ingrediente} pasado como parametro
 	 * 
-	 * @param ingrediente
-	 *            a buscar
+	 * @param ingrendiente
+	 *            {@code Ingrediente} a buscar
 	 * @return true si contiene ingrediente<br>
-	 *         false en caso contrario.
+	 *         false en caso contrario
 	 */
-	public boolean contiene(IngredienteA ingrediente) {
+	public boolean contiene(IngredienteA ingrendiente) {
 		boolean resul = false;
-		if (ingrediente != null) {
-			final String NOMBRE_INGREDIENTE_BUSCAR = ingrediente.getNombre();
+		if (ingrendiente != null) {
+			final String NOMBRE_RECETA_BUSCAR = ingrendiente.getNombre();
 			for (IngredienteA iterateIngredient : ingredientes) {
-				if (NOMBRE_INGREDIENTE_BUSCAR.equalsIgnoreCase(iterateIngredient.getNombre())) {
+				if (NOMBRE_RECETA_BUSCAR.equalsIgnoreCase(iterateIngredient.getNombre())) {
 					resul = true;
 					break;
 				}
 			}
 		}
 		return resul;
-	}// boolean
+	}
 
 	/**
-	 * 
-	 * TODO cuando sea null lanzar Exception personalizada.
-	 * 
-	 * Añadimos un nuevo {@codeIngredienteA} a la receta.
+	 * TODO cuando sea null lanzar Exception personalizada<br>
+	 * Añadimos un nuevo {@code Ingrediente} a la receta
 	 * 
 	 * @param ingrendiente
 	 *            si es null no hace nada
 	 */
-
-	public void addIngrendienteA(IngredienteA ingrediente) {
-		if (ingrediente != null) {
-			this.ingredientes.add(ingrediente);
+	public void addIngrendiente(IngredienteA ingrendiente) {
+		if (ingrendiente != null) {
+			this.ingredientes.add(ingrendiente);
 		}
 	}
 
@@ -90,16 +104,13 @@ public class RecetaA {
 	 * @return true si eliminar ingrediente<br>
 	 *         false en caso contrario
 	 */
-	public boolean removeIngrendienteA(IngredienteA ingrediente) {
-
+	public boolean removeIngrendiente(IngredienteA ingrendiente) {
 		boolean resul = false;
-
-		if (ingrediente != null) {
-			final String NOMBRE_INGREDIENTE_ELIMINAR = ingrediente.getNombre();
+		if (ingrendiente != null) {
+			final String NOMBRE_INGREDIENTE_ELIMINAR = ingrendiente.getNombre();
 			IngredienteA iterateIngredient = null;
 			for (int i = 0; i < this.ingredientes.size(); i++) {
 				iterateIngredient = this.ingredientes.get(i);
-
 				if (NOMBRE_INGREDIENTE_ELIMINAR.equalsIgnoreCase(iterateIngredient.getNombre())) {
 					this.ingredientes.remove(i);
 					resul = true;
@@ -123,7 +134,8 @@ public class RecetaA {
 	}
 
 	public void setIngredientes(ArrayList<IngredienteA> ingredientes) {
-		this.ingredientes = (ingredientes == null) ? new ArrayList<>() : ingredientes;
+
+		this.ingredientes = (ingredientes == null) ? new ArrayList<IngredienteA>() : ingredientes;
 	}
 
 	public int getTiempo() {
@@ -158,10 +170,25 @@ public class RecetaA {
 		this.descripcion = descripcion;
 	}
 
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
 	@Override
 	public String toString() {
-		return "RecetaA [titulo=" + titulo + ", ingredientes=" + ingredientes + ", tiempo=" + tiempo + ", dificultad="
-				+ dificultad + ", comensales=" + comensales + ", descripcion=" + descripcion + "]";
+		return "Receta [titulo=" + titulo + ", imagen=" + imagen + ", ingredientes=" + ingredientes + ", tiempo="
+				+ tiempo + ", dificultad=" + dificultad + ", comensales=" + comensales + ", descripcion=" + descripcion
+				+ "]";
+	}
+
+	@Override
+	public int compareTo(RecetaA o) {
+		// pasamos a toLowerCase, para ignorar mayusculas y minusculas
+		return this.getTitulo().toLowerCase().compareTo(o.getTitulo().toLowerCase());
 	}
 
 }

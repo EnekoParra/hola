@@ -34,9 +34,9 @@ public class RecetaATest {
 	@Before
 	public void setUp() throws Exception {
 		tortillaPatatas = new RecetaA("Tortilla de patatas", null);
-		tortillaPatatas.addIngrendienteA(huevos);
-		tortillaPatatas.addIngrendienteA(cebolla);
-		tortillaPatatas.addIngrendienteA(patatas);
+		tortillaPatatas.addIngrendiente(huevos);
+		tortillaPatatas.addIngrendiente(cebolla);
+		tortillaPatatas.addIngrendiente(patatas);
 	}
 
 	@After
@@ -58,11 +58,11 @@ public class RecetaATest {
 		int numero = r.getIngredientes().size();
 		assertEquals("No debe existir ingredientes", 0, numero);
 
-		r.addIngrendienteA(null);
+		r.addIngrendiente(null);
 		numero = r.getIngredientes().size();
 		assertEquals("No debe existir ingredientes", 0, numero);
 
-		r.addIngrendienteA(new IngredienteA("", 0, true));
+		r.addIngrendiente(new IngredienteA("", 0, true));
 		numero = r.getIngredientes().size();
 		assertEquals(1, numero);
 	}
@@ -70,12 +70,12 @@ public class RecetaATest {
 	@Test
 	public void testRemoveIngredienteA() {
 		RecetaA r = new RecetaA("Tortilla patatas", null);
-		assertFalse(r.removeIngrendienteA(null));
+		assertFalse(r.removeIngrendiente(null));
 
-		tortillaPatatas.addIngrendienteA(huevos);
+		tortillaPatatas.addIngrendiente(huevos);
 
 		huevos.setNombre("HueVos");
-		tortillaPatatas.removeIngrendienteA(huevos);
+		tortillaPatatas.removeIngrendiente(huevos);
 
 		ArrayList<IngredienteA> ingredientes = tortillaPatatas.getIngredientes();
 		assertEquals(3, ingredientes.size());

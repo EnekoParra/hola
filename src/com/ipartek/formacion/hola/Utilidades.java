@@ -1,5 +1,7 @@
 package com.ipartek.formacion.hola;
 
+import java.util.Arrays;
+
 /**
  * Clase {@code Utilidades} con metodos estaticos y comunes. <br>
  * Por ejemplo: Generar numeros,aleatorios, validaciones,etc.
@@ -8,17 +10,6 @@ package com.ipartek.formacion.hola;
  *
  */
 public class Utilidades {
-
-	/**
-	 * Genera numero {@code int} aleatorio desde 0 hasta <b>maximoValor</b>.
-	 * 
-	 * @param maximoValor
-	 *            numero aleatorio maximos que puede generar, incluido este.
-	 * @return numero entero aleatorio
-	 */
-	static public int getNumAleatorio(int maximoValor) {
-		return (int) (Math.random() * maximoValor);
-	}
 
 	/**
 	 * Ordenacion en burbuja para un array de enteros.
@@ -30,7 +21,40 @@ public class Utilidades {
 	 */
 
 	static public int[] bubbleSort(int[] aDesordenado) {
+
+		int numero1 = 0;
+		boolean duende = true;
+
+		while (duende) {
+			duende = false;
+
+			for (int i = 0; i < aDesordenado.length - 1; i++) {
+				if (aDesordenado[i] > aDesordenado[i + 1]) {
+					numero1 = aDesordenado[i];
+					aDesordenado[i] = aDesordenado[i + 1];
+					aDesordenado[i + 1] = numero1;
+					duende = true;
+				}
+			}
+		}
+
 		return aDesordenado;
+	}
+
+	static public int[] bubbleArrayAscendenteSort(int[] aDesordenado) {
+		Arrays.sort(aDesordenado);
+		return aDesordenado;
+	}
+
+	/**
+	 * Genera numero {@code int} aleatorio desde 0 hasta <b>maximoValor</b>.
+	 * 
+	 * @param maximoValor
+	 *            numero aleatorio maximos que puede generar, incluido este.
+	 * @return numero entero aleatorio
+	 */
+	static public int getNumAleatorio(int maximoValor) {
+		return (int) (Math.random() * maximoValor);
 	}
 
 	/**
