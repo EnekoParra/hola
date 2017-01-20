@@ -19,9 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="3" language="java" name="com.ipartek.formacion.recetas.ejercicios.herencia.Vendible" project="hola" 
-    file="/hola/src/com/ipartek/formacion/recetas/ejercicios/herencia/Vendible.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <interface id="3" language="java" name="com.ipartek.formacion.animal.pojo.Vendible" project="hola" 
+    file="/hola/src/com/ipartek/formacion/animal/pojo/Vendible.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="384" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

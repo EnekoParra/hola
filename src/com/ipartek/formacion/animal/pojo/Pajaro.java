@@ -1,6 +1,5 @@
 package com.ipartek.formacion.animal.pojo;
 
-import com.ipartek.formacion.recetas.ejercicios.herencia.Vendible;
 import com.ipartek.formacion.recetas.pojo.InterfazEstupida;
 
 public class Pajaro extends Animal implements Volador, Vendible, InterfazEstupida {

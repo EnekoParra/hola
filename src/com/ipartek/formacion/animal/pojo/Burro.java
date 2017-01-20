@@ -2,7 +2,6 @@ package com.ipartek.formacion.animal.pojo;
 
 import java.util.ArrayList;
 
-import com.ipartek.formacion.recetas.ejercicios.herencia.Vendible;
 import com.ipartek.formacion.recetas.pojo.Cocinable;
 import com.ipartek.formacion.recetas.pojo.Ingrediente;
 import com.ipartek.formacion.vehiculos.pojo.Conducible;

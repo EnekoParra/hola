@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.ipartek.formacion.animal.pojo.Burro;
 import com.ipartek.formacion.animal.pojo.Pajaro;
-import com.ipartek.formacion.recetas.ejercicios.herencia.Vendible;
+import com.ipartek.formacion.animal.pojo.Vendible;
 
 /**
  * Ejercicio apra aprender a usar la Herencia e interfaces.<br>
