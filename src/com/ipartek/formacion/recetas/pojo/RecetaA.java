@@ -1,4 +1,4 @@
-package com.ipartek.formacion.hola.pojo;
+package com.ipartek.formacion.recetas.pojo;
 
 import java.util.ArrayList;
 

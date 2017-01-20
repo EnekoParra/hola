@@ -1,4 +1,4 @@
-package com.ipartek.formacion.hola.pojo;
+package com.ipartek.formacion.recetas.pojo;
 
 public class Ingrediente {
 

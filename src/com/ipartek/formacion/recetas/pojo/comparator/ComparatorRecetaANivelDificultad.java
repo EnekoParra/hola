@@ -1,6 +1,8 @@
-package com.ipartek.formacion.hola.pojo;
+package com.ipartek.formacion.recetas.pojo.comparator;
 
 import java.util.Comparator;
+
+import com.ipartek.formacion.recetas.pojo.RecetaA;
 
 public class ComparatorRecetaANivelDificultad implements Comparator<RecetaA> {
 

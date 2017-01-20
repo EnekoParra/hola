@@ -1,4 +1,4 @@
-package com.ipartek.formacion.hola.pojo;
+package com.ipartek.formacion.recetas.ejercicios;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,6 +8,10 @@ import java.util.Collections;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.ipartek.formacion.recetas.pojo.IngredienteA;
+import com.ipartek.formacion.recetas.pojo.RecetaA;
+import com.ipartek.formacion.recetas.pojo.comparator.ComparatorRecetaANivelDificultad;
 
 public class ComparacionesTestA {
 
@@ -77,14 +81,4 @@ public class ComparacionesTestA {
 		assertEquals(MSG_ERROR_DIFICULTAD, marmitako, recetas.get(2));
 	}
 
-	@Test
-	public void testCompararNumIngredientes() {
-
-		final String MSG_ERROR_NUM_INGREDIENTES = "No ordena por numero de ingredientes";
-
-		Collections.sort();
-		assertEquals(MSG_ERROR_NUM_INGREDIENTES, pescado, ingredientes.get(1));
-		assertEquals(MSG_ERROR_NUM_INGREDIENTES, carne, ingredientes.get(2));
-		assertEquals(MSG_ERROR_NUM_INGREDIENTES, verdura, ingredientes.get(3));
-	}
 }

@@ -1,4 +1,4 @@
-package com.ipartek.formacion.hola;
+package com.ipartek.formacion.hola.pojo;
 
 import java.util.Arrays;
 

@@ -13,6 +13,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.ipartek.formacion.recetas.pojo.IngredienteA;
+import com.ipartek.formacion.recetas.pojo.RecetaA;
+
 public class RecetaATest {
 
 	// Variables globales, se inicializan en "setUp".

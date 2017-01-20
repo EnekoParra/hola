@@ -2,7 +2,7 @@ package com.ipartek.formacion.recetas.ejercicios.herencia;
 
 import java.util.ArrayList;
 
-import com.ipartek.formacion.hola.pojo.Ingrediente;
+import com.ipartek.formacion.recetas.pojo.Ingrediente;
 
 public class Burro extends Animal implements Conducible, Cocinable, Vendible {
 
