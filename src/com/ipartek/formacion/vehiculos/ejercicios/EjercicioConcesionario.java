@@ -1,6 +1,10 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.vehiculos.ejercicios;
 
 import java.util.ArrayList;
+
+import com.ipartek.formacion.vehiculos.pojo.Vehiculo;
+import com.ipartek.formacion.vehiculos.pojo.VehiculoDiesel;
+import com.ipartek.formacion.vehiculos.pojo.VehiculoElectrico;
 
 public class EjercicioConcesionario {
 

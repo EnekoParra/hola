@@ -1,8 +1,6 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.recetas.pojo;
 
 import java.util.ArrayList;
-
-import com.ipartek.formacion.recetas.pojo.Ingrediente;
 
 public interface Cocinable {
 

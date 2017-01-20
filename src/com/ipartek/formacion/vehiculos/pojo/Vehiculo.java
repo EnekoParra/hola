@@ -1,4 +1,4 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.vehiculos.pojo;
 
 public class Vehiculo implements Conducible {
 

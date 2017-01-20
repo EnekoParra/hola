@@ -1,4 +1,4 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.hola.pojo;
 
 public class CirculoNoAbstracto extends Circulo {
 

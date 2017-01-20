@@ -1,6 +1,10 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.animal.ejercicios;
 
 import java.util.ArrayList;
+
+import com.ipartek.formacion.animal.pojo.Burro;
+import com.ipartek.formacion.animal.pojo.Pajaro;
+import com.ipartek.formacion.recetas.ejercicios.herencia.Vendible;
 
 /**
  * Ejercicio apra aprender a usar la Herencia e interfaces.<br>

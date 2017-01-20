@@ -1,4 +1,6 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.animal.pojo;
+
+import com.ipartek.formacion.recetas.ejercicios.herencia.Vendible;
 
 public class Pajaro extends Animal implements Volador, Vendible {
 

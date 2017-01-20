@@ -1,4 +1,4 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.animal.pojo;
 
 public interface Volador {
 

@@ -1,4 +1,6 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.hola.pojo;
+
+import com.ipartek.formacion.hola.ejercicios.ObjetoGrafico;
 
 public abstract class Circulo extends ObjetoGrafico {
 

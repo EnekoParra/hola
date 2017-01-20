@@ -1,4 +1,4 @@
-package com.ipartek.formacion.recetas.ejercicios.herencia;
+package com.ipartek.formacion.hola.pojo;
 
 /**
  * Comprobar que solo podemos instanciar objetos de las Clases que no sean
